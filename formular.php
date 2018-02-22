@@ -46,6 +46,7 @@
       <header class="jumbotron my-4">
         <h1 class="display-3">Fyll i dina uppgifter och bekräfta din beställning!</h1>
         <p class="card-text">Du håller på att köpa: 
+
            <!-- Hämta data via URLen med GET. -->
            <?php
                         $_GET['produkt'];
@@ -67,13 +68,13 @@
             
             <div class="card-body">
               <br><br>
-              <h4 class="card-title">xxx</h4>
-              <p class="card-text">xxx</p>
+              <h4 class="card-title"></h4>
+              <p class="card-text"></p>
 
                 
                 <!-- skapa formulär. -->
                 
-                    <form action="mail.php?namn?=<?=$sko[0]?>&mail=<?=$sko[2]?>" method="post">
+                    <form action="mail.php?namn=<?=$sko[0]?>&mail=<?=$sko[2]?>" method="post">
 
                         Fullständingt namn<br>
                         <input name="namn" type "text" required>
@@ -82,32 +83,24 @@
                         <input type="text" required>
                         <br>
                         Epost<br>
-                        <input namn="epost" type="email">
+                        <input namn="epost" type="email" required>
                         Meddelande<br>
                         <input namn="meddelande" type="text">
 
-
-
-                
+                        <input type="submit" value="Skicka e-post">
+                    </form>
 
 
               </p>
             </div>
             <div class="card-footer">
-              <a href="mail.php?produkt?=<?=$sko[0]?>&mail=<?=$sko[2]?>" class="btn btn-primary">Bekräfta köp!</a>
+              <a href="mail.php" class="btn btn-primary">Bekräfta köp!</a>
             </div>
           </div>
         </div>
 
-        
-
-        
-
       </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">

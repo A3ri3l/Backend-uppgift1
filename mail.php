@@ -30,7 +30,7 @@ mail($to, $subject, $message, $headers);
 
 
 //skickar kunden till startsidan.
-header('Location: index.html');
+header('Location: index.php');
 exit();
 
 //Följer en tutorial som har errorhantering också. 

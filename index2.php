@@ -5,14 +5,11 @@
 //Sett massa tutorials som använder bilden i sin array... inte fattat om jag behöver det när 
 //jag använder template från bootstrap.
 //Måste jag göra en separat array för varje för att få till det med knapparna?
-    $skor = array (
+    $vitaskor = array("Vita skor", "skor1.jpg", "500 kr");
+    $snake = array("Snake", "skor2.jpg", "600 kr");
+    $rosaskor = array("Rosa skor", "skor3.jpg", "700 kr");
+    $birds = array("Birds", "skor4.jpg", "800 kr");
 
-        array("Vita skor", "skor1.jpg", "500 kr"),
-        array("Snake", "skor2.jpg", "600 kr"),
-        array("Rosa skor", "skor3.jpg", "700 kr"),
-        array("Birds", "skor4.jpg", "800 kr"),
-
-    );
 
 ?>
 
@@ -78,8 +75,8 @@
             </div>
             <div class="card-footer">
      
-                <?php foreach($skor as $sko) { ?>
-                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+                <?php { ?>
+                    <a href="formular.php?produkt=<?=$vitaskor[0]?>&pris=<?=$vitaskor[2]?>" class="btn btn-primary">Köp nu</a>
                 <?php } ?>
 
             </div>
