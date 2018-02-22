@@ -6,10 +6,10 @@
 //jag använder template från bootstrap.
     $skor = array (
 
-        array("Vita skor", "../bilder/skor1.jpg", "500 kr"),
-        array("Snake", "../bilder/skor2.jpg", "600 kr"),
-        array("Rosa skor", "../bilder/skor3.jpg", "700 kr"),
-        array("Birds", "../bilder/skor4.jpg", "800 kr"),
+        array("Vita skor", "skor1.jpg", "500 kr"),
+        array("Snake", "skor2.jpg", "600 kr"),
+        array("Rosa skor", "skor3.jpg", "700 kr"),
+        array("Birds", "skor4.jpg", "800 kr"),
 
     );
 
@@ -76,15 +76,14 @@
               <p class="card-text">Pris: 500</p>
             </div>
             <div class="card-footer">
-                ?>
+            
 
      
-                <?php foreach($kor as $sko) : ?>
+                <?php foreach($kor as $sko) { ?>
             
-                    <a href="formulär.php?produkt?=<?=$sko[0]?>&mail=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
-                     <?=$sko[0]?>
-                  </a>
-                <?php endforeach; ?>
+                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+                     
+                <?php } ?>
 
             </div>
           </div>
