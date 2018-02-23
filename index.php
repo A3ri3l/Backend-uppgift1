@@ -5,14 +5,11 @@
 //Sett massa tutorials som använder bilden i sin array... inte fattat om jag behöver det när 
 //jag använder template från bootstrap.
 //Måste jag göra en separat array för varje för att få till det med knapparna?
-    $skor = array (
+    $vitaskor = array("Vita skor", "skor1.jpg", "500 kr");
+    $snake = array("Snake", "skor2.jpg", "600 kr");
+    $rosaskor = array("Rosa skor", "skor3.jpg", "700 kr");
+    $birds = array("Birds", "skor4.jpg", "800 kr");
 
-        array("Vita skor", "skor1.jpg", "500 kr"),
-        array("Snake", "skor2.jpg", "600 kr"),
-        array("Rosa skor", "skor3.jpg", "700 kr"),
-        array("Birds", "skor4.jpg", "800 kr"),
-
-    );
 
 ?>
 
@@ -29,7 +26,7 @@
     <title>Skor för Alla</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/heroic-features.css" rel="stylesheet">
@@ -41,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Skor för Alla</a>
+        <a class="navbar-brand" href="index.php">Skor för Alla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -78,8 +75,8 @@
             </div>
             <div class="card-footer">
      
-                <?php foreach($skor as $sko) { ?>
-                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+                <?php { ?>
+                    <a href="formular.php?produkt=<?=$vitaskor[0]?>&pris=<?=$vitaskor[2]?>" class="btn btn-primary">Köp nu</a>
                 <?php } ?>
 
             </div>
@@ -94,8 +91,8 @@
               <p class="card-text">Pris: 600</p>
             </div>
             <div class="card-footer">
-                <?php foreach($skor as $sko) { ?>
-                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+                <?php { ?>
+                    <a href="formular.php?produkt=<?=$snake[0]?>&pris=<?=$snake[2]?>" class="btn btn-primary">Köp nu</a>
                 <?php } ?>
             </div>
           </div>
@@ -109,8 +106,8 @@
               <p class="card-text">Pris: 700</p>
             </div>
             <div class="card-footer">
-            <?php foreach($skor as $sko) { ?>
-                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+            <?php { ?>
+                    <a href="formular.php?produkt=<?=$rosaskor[0]?>&pris=<?=$rosaskor[2]?>" class="btn btn-primary">Köp nu</a>
                 <?php } ?>
             </div>
           </div>
@@ -125,8 +122,8 @@
               <p class="card-text">Pris: 800</p>
             </div>
             <div class="card-footer">
-            <?php foreach($skor as $sko) { ?>
-                    <a href="formular.php?produkt=<?=$sko[0]?>&pris=<?=$sko[2]?>" class="btn btn-primary">Köp nu</a>
+            <?php { ?>
+                    <a href="formular.php?produkt=<?=$birds[0]?>&pris=<?=$birds[2]?>" class="btn btn-primary">Köp nu</a>
                 <?php } ?>
             </div>
           </div>

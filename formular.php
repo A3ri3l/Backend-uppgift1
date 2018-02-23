@@ -11,7 +11,7 @@
     <title>Skor för Alla</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/heroic-features.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Skor för Alla</a>
+        <a class="navbar-brand" href="index.php">Skor för Alla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,11 +49,11 @@
 
            <!-- Hämta data via URLen med GET. -->
            <?php
-                        $_GET['produkt'];
-                        $_GET['pris'];
-                        echo "<pre>";
-                        print_r($_GET);
-                        echo "</pre>";
+                  $produkt = $_GET['produkt'];
+                  $pris = $_GET['pris'];
+                  echo "<h3>$produkt</h3>";
+                  echo "<h3>$pris</h3>";
+                      
             ?>
 
 
@@ -72,29 +72,28 @@
               <p class="card-text"></p>
 
                 
-                <!-- skapa formulär. -->
+                <!-- skapa formulär. Jag har inte nestlad array längre och kör istället en hidden på mina
+                    variabler som jag hämtat från föregående sida.-->
                 
-                    <form action="mail.php?namn=<?=$sko[0]?>&mail=<?=$sko[2]?>" method="post">
+                    <form action="mail.php" method="post">
 
                         Fullständingt namn<br>
                         <input name="namn" type "text" required>
                         <br>
                         Adress<br>
-                        <input type="text" required>
+                        <input name="adress" type="text" required>
                         <br>
                         Epost<br>
-                        <input namn="epost" type="email" required>
+                        <input name="epost" type="email" required>
                         Meddelande<br>
-                        <input namn="meddelande" type="text">
-
-                        <input type="submit" value="Skicka e-post">
+                        <input name="meddelande" type="text">
+                        <input name="produkt" type="hidden" value="<?php echo $produkt ?>">
+                        <input name="pris" type="hidden" value="<?php echo $pris?>">
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Bekräfta köp!">
                     </form>
 
-
-              </p>
-            </div>
-            <div class="card-footer">
-              <a href="mail.php" class="btn btn-primary">Bekräfta köp!</a>
             </div>
           </div>
         </div>
